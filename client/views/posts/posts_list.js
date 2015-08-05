@@ -1,13 +1,11 @@
 var postsData = [
   {
     title: 'Hello!',
-    url: 'github.com',
-    domain: 'hi there'
+    url: 'https://github.com'
   },
   {
     title: 'Nikitasmall',
-    url: 'nikitasmall.com',
-    domain: 'another hello!'
+    url: 'https://nikitasmall.com'
   }
 ];
 Template.postsList.helpers({
