@@ -1,7 +1,4 @@
 Template.pagination.helpers({
-  count: function() {
-    return Math.floor(Posts.find().count() / 5) + 1
-  },
   show: function(collection) {
     return (collection.count() / 5) > 1
   },
