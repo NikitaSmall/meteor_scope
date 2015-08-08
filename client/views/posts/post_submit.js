@@ -11,7 +11,11 @@ Template.postSubmit.events({
 
      Meteor.call('postInsert', post, function(error, result) {
        if (error) return alert(error.reason);
-       
+
+       if (result.postExist) {
+         alert('Пост с таким адресом уже создан!');
+       }
+
        Router.go('postPage', {_id: result._id});
      });
   }
