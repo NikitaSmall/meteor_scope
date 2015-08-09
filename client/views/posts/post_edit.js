@@ -19,7 +19,7 @@ Template.postEdit.events({
   },
 
   "click .delete": function(event, template) {
-    e.preventDefault();
+    event.preventDefault();
 
     if(confirm('Удалить этот пост?')) {
       var currentPostId = this._id;
