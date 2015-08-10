@@ -1,4 +1,4 @@
-Errors = new Meteor.Collection(null);
+Errors = new Meteor.Collection('errors');
 
 
 throwError = function(error) {
@@ -9,5 +9,6 @@ throwError = function(error) {
 }
 
 clearErrors = function() {
-  Errors.remove({seen: true});
+  if (Errors.find().count() > 0)
+    Errors.remove({seen: true});
 }
