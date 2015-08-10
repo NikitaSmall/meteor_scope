@@ -10,10 +10,10 @@ Template.postSubmit.events({
      // post._id = Posts.insert(post);
 
      Meteor.call('postInsert', post, function(error, result) {
-       if (error) return alert(error.reason);
+       if (error) throwError(error.reason);
 
        if (result.postExist) {
-         alert('Пост с таким адресом уже создан!');
+         throwError('Пост с таким адресом уже создан!');
        }
 
        Router.go('postPage', {_id: result._id});
