@@ -6,4 +6,10 @@
       {{> comment}}
     {{/each}}
   </ul>
+
+  {{#if currentUser}}
+    {{> submitComment}}
+  {{else}}
+    <p>Зарегистрируйтесь для того, чтобы оставить комментарий</p>
+  {{/if}}
 </template>
